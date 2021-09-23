@@ -1,3 +1,3 @@
-function editElement() {
-    // TODO
+function editElement(ref, match, replacer) {
+
 }
