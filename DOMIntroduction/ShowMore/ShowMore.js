@@ -1,7 +1,4 @@
-function showText() {
-    const text = document.getElementById('text');
-    text.style.display = 'inline';
-
-    const btn = document.getElementById('more');
-    btn.style.display = 'none';
+function showText(){
+    document.getElementById('more').style.display = 'none';
+    document.getElementById('text').style.display = 'inline';
 }

@@ -1,5 +1,5 @@
-function editElement(ref, match, replacer) {
-    let content = ref.textContent;
-    ref.textContent = content.replaceAll(match, replacer);
-
+function editElement(ref, match, replacer){
+    let text = document.getElementById('e1').textContent;
+    const matcher = new RegExp(match, 'g');
+    ref.textContent = text.replace(matcher, replacer);
 }

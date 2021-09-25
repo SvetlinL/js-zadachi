@@ -1,11 +1,9 @@
-function extractText() {
-    const items = document.getElementById('items').children;
-
-    const result = [];
-
-    for (const item of Array.from(items)) {
-        result.push(item.textContent)
+function extractText(){
+    let items = document.getElementById('items').children;
+    let result = [];
+    for (let i = 0; i < items.length; i++) {
+        result.push(items[i].textContent);
     }
-
-    document.getElementById('result').textContent = result.join('\n');
+    let resultArea = document.getElementById('result');
+    resultArea.value = result.join('\n');
 }

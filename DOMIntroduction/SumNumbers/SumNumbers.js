@@ -1,13 +1,6 @@
-function calc() {
-    //read value of input fields
-    // sum values
-    //set result as value of output field
-    //!!!!!
-    // za tozi tip poleta ne se polzva textContent !!!!
-    //!!!!!
-    const a = Number(document.getElementById('num1').value);
-    const b = Number(document.getElementById('num2').value);
-    const sum = a+b;
-    document.getElementById('sum').value = sum;
+function calc(){
+    let num1 = Number(document.getElementById('num1').value);
+    let num2 = Number(document.getElementById('num2').value);
 
+    document.getElementById('sum').value = num1 + num2;
 }
