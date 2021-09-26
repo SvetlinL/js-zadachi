@@ -1,10 +1,12 @@
-function toggle() {
-    // "." selektira klas
-    const button = document.querySelector('.button');
-    const textDiv = document.getElementById('extra');
+function toggle(){
+    let button = document.querySelector('.button');
+    if (button.textContent === 'More'){
+        button.textContent = 'Less';
+        document.getElementById('extra').style.display = 'block';
+    }else {
+        button.textContent = 'More';
+        document.getElementById('extra').style.display = 'none';
+    }
 
-    button.textContent = button.textContent === "More" ? "Less" : "More";
-    textDiv.style.display = textDiv.style.display === "none" || textDiv.style.display === "" ?
-        textDiv.style.display = "block" : textDiv.style.display = "none";
-
+    console.log(button)
 }

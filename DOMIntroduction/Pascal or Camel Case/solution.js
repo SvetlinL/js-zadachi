@@ -1,25 +1,30 @@
-function solve() {
-    const text = document.getElementById('text').value;
-    const naming = document.getElementById('naming-convention').value;
-    const resultContainer = document.getElementById('result');
+function solve(){
+    let inputText = document.getElementById('text').value;
+    let convention = document.getElementById('naming-convention').value;
 
-    const splitted = text.split(" ");
-    let resultString = "";
-    if (naming  === 'Pascal Case'){
-        for (let i = 0; i < splitted.length; i++) {
-            resultString += splitted[i][0].toUpperCase() + splitted[i].slice(1, splitted[i].length).toLowerCase();
+    let inputTextArray = inputText.toLowerCase().split(' ');
+    let resultArray = [];
+    if (convention === "Pascal Case"){
+        for (let i = 0; i < inputTextArray.length; i++) {
+            let currentWord = inputTextArray[i].charAt(0).toUpperCase();
+            currentWord += inputTextArray[i].substring(1, inputTextArray[i].length);
+            resultArray.push(currentWord);
         }
-        resultContainer.textContent = resultString;
-    }else  if (naming === 'Camel Case'){
-        resultString += splitted[0][0].toLowerCase() + splitted[0].slice(1, splitted[0].length).toLowerCase();
-        for (let i = 1; i < splitted.length; i++) {
-            resultString += splitted[i][0].toUpperCase() + splitted[i].slice(1, splitted[i].length).toLowerCase();
+        document.getElementById('result').textContent = resultArray.join('');
+    }else if (convention === "Camel Case"){
+        for (let i = 0; i < inputTextArray.length; i++) {
+            if(i>0){
+                let currentWord = inputTextArray[i].charAt(0).toUpperCase();
+                currentWord += inputTextArray[i].substring(1, inputTextArray[i].length);
+                resultArray.push(currentWord);
+            }else {
+                resultArray.push(inputTextArray[i]);
+            }
         }
-        resultContainer.textContent = resultString;
+        document.getElementById('result').textContent = resultArray.join('');
     }else {
-        resultContainer.textContent = "Error!";
-        return;
-    }
 
+        document.getElementById('result').textContent = 'Error!';
+    }
 
 }

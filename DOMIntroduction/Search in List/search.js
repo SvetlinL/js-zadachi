@@ -1,17 +1,17 @@
-function search() {
-   const elements = Array.from(document.querySelectorAll('ul li'));
-   const text = document.getElementById('searchText').value;
-   let matches = 0;
+function search(){
+   let listArray = Array.from(document.getElementById('towns').children);
+   let searchText = document.getElementById('searchText').value;
 
-   elements.forEach((el) => {
-      if (el.textContent.includes(text)){
-         el.style.fontWeight = 'bold';
-         el.style.textDecoration = 'underline';
-         matches++;
-      }else{
-         el.style.fontWeight = "normal";
-         el.style.textDecoration = '';
+   let counter = 0;
+   for (let i = 0; i < listArray.length; i++) {
+      if (listArray[i].textContent.includes(searchText)){
+         listArray[i].style.fontWeight = 'bold';
+         listArray[i].style.textDecoration = 'underline';
+         counter ++;
+      }else {
+         listArray[i].style.fontWeight = '';
+         listArray[i].style.textDecoration = '';
       }
-   })
-   document.getElementById('result').textContent = `${matches} matches found`;
+   }
+   document.getElementById('result').textContent = `${counter} matches found`;
 }
