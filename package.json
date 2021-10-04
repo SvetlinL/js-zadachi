@@ -1,0 +1,8 @@
+{
+  "name": "js zadachi",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.4"
+  }
+}

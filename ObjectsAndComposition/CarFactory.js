@@ -16,6 +16,7 @@ function createCar(requirements) {
         car.engine.power = 200;
         car.engine.volume = 3500;
     }
+
     let size = requirements.wheelsize;
     if (requirements.wheelsize % 2 == 0) {
         size = requirements.wheelsize - 1;
