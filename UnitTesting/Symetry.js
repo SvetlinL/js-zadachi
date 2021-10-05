@@ -7,4 +7,6 @@ function isSymmetric(arr) {
     return equal;
 }
 
-module.exports = isSymmetric();
+
+
+module.exports = isSymmetric;
