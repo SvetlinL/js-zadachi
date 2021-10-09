@@ -1,8 +1,11 @@
 {
   "name": "js zadachi",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "streamsaver": "^2.0.5"
+  },
   "devDependencies": {
-    "chai": "^4.3.4"
+    "chai": "^4.3.4",
+    "file-saver": "^2.0.5"
   }
 }

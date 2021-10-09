@@ -10,5 +10,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="@types/chai" level="application" />
     <orderEntry type="library" name="@types/mocha" level="application" />
+    <orderEntry type="library" name="@types/file-saver" level="application" />
+    <orderEntry type="library" name="@types/streamsaver" level="application" />
   </component>
 </module>
