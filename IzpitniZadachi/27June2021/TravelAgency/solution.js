@@ -1,11 +1,6 @@
 window.addEventListener('load', solution);
 
 function solution() {
-    // let fullName = document.getElementById('fname').value;
-    // let email = document.getElementById('email').value;
-    // let phoneNumber = document.getElementById('phone').value;
-    // let address = document.getElementById('address').value;
-    // let posCode = document.getElementById('code').value;
 
     let infoPreviewDiv = document.getElementById('infoPreview');
 
